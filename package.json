@@ -1,0 +1,32 @@
+{
+  "name": "@deepseek-ai/dsh-client-api-stats",
+  "description": "DeepSeek API 余额与用量监控圆环插件：在设置按钮上方以同尺寸圆环实时显示账户余额，悬停展示余额与 token 用量明细",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "@deepseek-ai/dsh-client-runtime": "^0.1.0-rc.6"
+  }
+}
